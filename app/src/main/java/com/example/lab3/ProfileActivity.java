@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -18,12 +19,14 @@ public class ProfileActivity extends AppCompatActivity {
     public static final String ACTIVITY_NAME= "ProfileActivity";
 
     ImageButton mImageButton;
+    Button chatRoomButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profileactivity);
         mImageButton = findViewById(R.id.imageButton);
+        chatRoomButton = findViewById(R.id.chatRoomButton);
 
         Intent mainActivityData = getIntent();
         String emailMainTyped = mainActivityData.getStringExtra("emailTyped");
@@ -34,6 +37,12 @@ public class ProfileActivity extends AppCompatActivity {
         if(mImageButton != null)
             mImageButton.setOnClickListener(clk -> {
                 dispatchTakePictureIntent();
+            });
+
+        if(chatRoomButton != null)
+            chatRoomButton.setOnClickListener(v -> {
+                        Intent goToChatPage = new Intent(ProfileActivity.this, ChatRoomActivity.class);
+                        startActivity(goToChatPage);
             });
 
         Log.e(ACTIVITY_NAME,"In function: onCreate()");
