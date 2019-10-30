@@ -14,7 +14,7 @@
         />
 
     <TextView
-        android:id="@+id/message"
+        android:id="@+id/messageSent"
         android:layout_width="wrap_content"
         android:layout_height="64dp"
         app:layout_constraintTop_toTopOf="parent"

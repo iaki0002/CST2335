@@ -14,4 +14,9 @@
     <string name="lab3line9">Geben sie ihre E-Mail Adresse ein</string>
     <string name="buttontext1">Dein Bild:</string>
     <string name="buttontext2">Klicken Sie auf die Schaltfläche oben, um ein Bild aufzunehmen</string>
+    <string name="goChat">Gehe in den Chatraum</string>
+
+    <string name="chatSend">Senden</string>
+    <string name="chatReceive">Erhalten</string>
+    <string name="chatTypeHere">tippen sie hier…</string>
 </resources>
